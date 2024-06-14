@@ -1,9 +1,8 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize("crud_db", "root", "", {
+const db = new Sequelize("crud_db", "postgres", "Kronos86", {
   host: "localhost",
-  port: 3300,
-  dialect: "mysql",
+  dialect: "postgres",
 });
 
 export default db;

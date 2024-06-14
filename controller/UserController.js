@@ -8,3 +8,13 @@ export const getUsers = async (req, res) => {
         console.log(error.message);
     }
 }
+
+export const createUser = async (req, res) => {
+    const { name, email, gender} = req.body;
+    try {
+        const response = await User.create({ name: name, email: email, gender: gender});
+        res.status(200).json(response);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
